@@ -24,13 +24,13 @@ namespace SysopTrainer.Models
 
         public void ShowAnswer()
         {
-            AnswerText = BehindCodeLogic.GetCorrectAnswer();
+            AnswerText = Methods.GetCorrectAnswer();
         }
 
         public void UpdateQuestionTextBlock()
         {
-            QuestionText = BehindCodeLogic.RandomizeQuestion();
-            CorrectAnswer = BehindCodeLogic.GetCorrectAnswer();
+            QuestionText = Methods.RandomizeQuestion();
+            CorrectAnswer = Methods.GetCorrectAnswer();
         }
 
         public void CheckAnswer()

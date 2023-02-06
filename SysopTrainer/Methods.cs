@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SysopTrainer
 {
-    public static class BehindCodeLogic
+    public static class Methods
     {
         private static readonly Random getrandom = new Random();
         private static int N { get; set; }

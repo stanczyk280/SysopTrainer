@@ -23,7 +23,7 @@ namespace SysopTrainer
         public MainWindow()
         {
             InitializeComponent();
-            BehindCodeLogic.LoadJson();
+            Methods.LoadJson();
         }
     }
 }
