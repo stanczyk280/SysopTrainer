@@ -19,7 +19,7 @@
     <Grid>
         <DockPanel x:Name="questionDisplayPanel" LastChildFill="True" Margin="40,30,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Border x:Name="questionDisplayBorder" DockPanel.Dock="Top" BorderBrush="Black" BorderThickness="1" CornerRadius="2">
-                <TextBlock x:Name="questionTextBlock" Text="{Binding Path=QuestionText, Mode=OneWay}" Style="{StaticResource textBlock}" />
+                <TextBlock x:Name="questionTextBlock" Text="{Binding Path=QuestionText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBlock}" />
             </Border>
             <Button x:Name="randomQuestionButton" Style="{StaticResource button}" Command="{Binding UpdateQuestionTextCommand}" Content="Wylosuj pytanie">
                 <b:Interaction.Behaviors>
@@ -29,14 +29,14 @@
         </DockPanel>
         <DockPanel x:Name="answerDisplayPanel" Height="300"  LastChildFill="True" Margin="0,30,40,0" VerticalAlignment="Top" HorizontalAlignment="Right">
             <Border x:Name="answerDisplayBorder" DockPanel.Dock="Top" BorderBrush="Black" BorderThickness="1" CornerRadius="2">
-                <TextBox x:Name="answerTextBox" Text="{Binding Path=AnswerText, Mode=OneWay}" Style="{StaticResource textBox}" />
+                <TextBox x:Name="answerTextBox" Text="{Binding Path=AnswerText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource textBox}" />
             </Border>
             <Button x:Name="submitAnswerButton" Style="{StaticResource button}" Command="{Binding CheckAnswerCommand}" HorizontalAlignment="Left" Content="Zatwierdź odpowiedź">
                 <b:Interaction.Behaviors>
                     <Behaviors:ButtonEnlarge />
                 </b:Interaction.Behaviors>
             </Button>
-            <Button x:Name="displayAnswerButton" Style="{StaticResource button}" Command="{Binding UpdateAnswerTextCommand}" HorizontalAlignment="Right" Content="Pokaż odpowiedź">
+            <Button x:Name="displayAnswerButton" Style="{StaticResource button}" Command="{Binding ShowAnswerCommand}" HorizontalAlignment="Right" Content="Pokaż odpowiedź">
                 <b:Interaction.Behaviors>
                     <Behaviors:ButtonEnlarge />
                 </b:Interaction.Behaviors>

@@ -19,26 +19,25 @@ namespace SysopTrainer.Models
             AnswerText = "Tutaj wprowadź swoją odpowiedź";
         }
 
-        public void UpdateQuestionTextBlock()
+        public void ShowAnswer(string answer)
         {
-            QuestionText = "rrr";
+            AnswerText = answer;
         }
 
-        public void UpdateAnswerTextBox(string text)
+        public void UpdateQuestionTextBlock(string question)
         {
-            AnswerText = text;
+            QuestionText = question;
         }
 
         public void CheckAnswer()
         {
-            UpdateAnswerTextBox(AnswerText);
-            if (QuestionText == AnswerText)
+            if (AnswerText == "answer")
             {
-                AnswerText += "\nCorrect!";
+                AnswerText += "\n Correct!";
             }
             else
             {
-                AnswerText += "\nIncorrect!";
+                AnswerText += "\n Incorrect!";
             }
         }
     }
