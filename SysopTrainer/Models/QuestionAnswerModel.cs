@@ -1,6 +1,8 @@
-﻿using System;
+﻿using SysopTrainer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +14,7 @@ namespace SysopTrainer.Models
     {
         public string QuestionText { get; set; }
         public string AnswerText { get; set; }
+        private string CorrectAnswer { get; set; }
 
         public QuestionAnswerModel()
         {
@@ -19,19 +22,20 @@ namespace SysopTrainer.Models
             AnswerText = "Tutaj wprowadź swoją odpowiedź";
         }
 
-        public void ShowAnswer(string answer)
+        public void ShowAnswer()
         {
-            AnswerText = answer;
+            AnswerText = BehindCodeLogic.GetCorrectAnswer();
         }
 
-        public void UpdateQuestionTextBlock(string question)
+        public void UpdateQuestionTextBlock()
         {
-            QuestionText = question;
+            QuestionText = BehindCodeLogic.RandomizeQuestion();
+            CorrectAnswer = BehindCodeLogic.GetCorrectAnswer();
         }
 
         public void CheckAnswer()
         {
-            if (AnswerText == "answer")
+            if (AnswerText == CorrectAnswer)
             {
                 AnswerText += "\n Correct!";
             }

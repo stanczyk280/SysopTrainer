@@ -7,6 +7,7 @@ using System.Linq;
 using System.Printing;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Input;
@@ -17,9 +18,6 @@ namespace SysopTrainer.ViewModels
     public class QuestionAnswerViewModel : INotifyPropertyChanged
     {
         private QuestionAnswerModel model = new QuestionAnswerModel();
-
-        public string question = "question";
-        public string answer = "answer";
 
         public string QuestionText
         {
@@ -52,7 +50,7 @@ namespace SysopTrainer.ViewModels
                 if (updateQuestionText == null) updateQuestionText = new RelayCommand(
                     (object o) =>
                     {
-                        model.UpdateQuestionTextBlock(question);
+                        model.UpdateQuestionTextBlock();
                         OnPropertyChanged(nameof(QuestionText));
                     },
                     (object o) =>
@@ -88,7 +86,7 @@ namespace SysopTrainer.ViewModels
                 if (showAnswer == null) showAnswer = new RelayCommand(
                     (object o) =>
                     {
-                        model.ShowAnswer(answer);
+                        model.ShowAnswer();
                         OnPropertyChanged(nameof(AnswerText));
                     },
                     (object o) =>

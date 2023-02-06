@@ -1,0 +1,37 @@
+[
+  {
+    "question_number": 1,
+    "question_text": "Z czego składa się komputer von Neumanna (wymień po przecinku)",
+    "answer_text": "jednostka sterująca, jednostka arytmetyczno-logiczna (ALU), pamięć główna do przechowywania danych, urządzenia wejścia-wyjścia"
+  },
+  {
+    "question_number": 2,
+    "question_text": "Podaj z dokładnością do czynnika 2 szybkości (w MB/s) zapisu do pamięci głównej (operacyjnej) na dysk SSD",
+    "answer_text": "500 mb/s"
+  },
+  {
+    "question_number": 3,
+    "question_text": "Podaj z dokładnością do czynnika 2 szybkości (w MB/s) zapisu do pamięci głównej (operacyjnej) na dysk SAS",
+    "answer_text": "90 mb/s"
+  },
+  {
+    "question_number": 4,
+    "question_text": "Podaj z dokładnością do czynnika 2 szybkości (w MB/s) zapisu do pamięci głównej (operacyjnej) na dysk SATA",
+    "answer_text": "40 mb/s"
+  },
+  {
+    "question_number": 5,
+    "question_text": "Podaj szybkości transmisji danych wersji USB 1.1",
+    "answer_text": "12 mbit/s"
+  },
+  {
+    "question_number": 6,
+    "question_text": "Podaj szybkości transmisji danych wersji USB 2.0",
+    "answer_text": "480 mbit/s"
+  },
+  {
+    "question_number": 7,
+    "question_text": "Podaj szybkości transmisji danych wersji USB 3.0 (użyć kropki jako separatora liczb dziesiętnych)",
+    "answer_text": "4.8 Gbit/s"
+  }
+]
