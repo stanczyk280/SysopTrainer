@@ -31,6 +31,7 @@ namespace SysopTrainer.Models
         {
             QuestionText = Methods.RandomizeQuestion();
             CorrectAnswer = Methods.GetCorrectAnswer();
+            AnswerText = string.Empty;
         }
 
         public void CheckAnswer()
