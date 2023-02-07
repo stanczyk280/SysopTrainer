@@ -33,5 +33,215 @@
     "question_number": 7,
     "question_text": "Podaj szybkości transmisji danych wersji USB 3.0 (użyć kropki jako separatora liczb dziesiętnych)",
     "answer_text": "4.8 Gbit/s"
+  },
+  {
+    "question_number": 8,
+    "question_text": "Podaj szybkości transmisji danych wersji USB 3.1",
+    "anwser_text": "10 Gbit/s"
+  },
+  {
+    "question_number": 9,
+    "question_text": "Do zadań bootloadera należy:",
+    "anwser_text": "Załadowanie systemu operacyjnego do pamięci, możliwość wyboru jądra które zostanie załadowane, wybranie trybu jądra"
+  },
+  {
+    "question_number": 10,
+    "question_text": "Przetwarzanie potokowe w odniesieniu do procesora jest możliwe dzięki temu, że:",
+    "anwser_text": "Cykl przetwarzania jest podzielony na odrębne bloki przetwarzania, z których każdy może zajmować się inną logiką"
+  },
+  {
+    "question_number": 11,
+    "question_text": "Do zadań jądra należy:",
+    "anwser_text": "Obsługa wejścia/wyjścia, umożliwienie interakcji z jednostką zarządzającą pamięcią, kontrola nad dostępem do czasu procesora"
+  },
+  {
+    "question_number": 12,
+    "question_text": "Jądro systemu operacyjnego jest umieszczane w pamięci operacyjnej za pomocą czego?",
+    "anwser_text": "Bootloader (porgram rozruchowy)"
+  },
+  {
+    "question_number": 13,
+    "question_text": "Co to jest sterownik urządzenia i jak jest jego funkcja?",
+    "anwser_text": "Program związany z danym urządzeniem i odpowiadający za nie, pośredniczy między danym urządzeniem, a resztą systemu komputerowego."
+  },
+  {
+    "question_number": 14,
+    "question_text": "Co to jest moduł obsługi urządzenia i jaka jest jego funkcja?",
+    "anwser_text": "Część systemu operacyjnego (oprogramowanie systemowe niskiego poziomu), odpowiada za łączenie i komunikację między urządzeniami wejścia-wyjścia i resztą systemu operacyjnego, komunikację ze sterownikiem urządzenia:"
+  },
+  {
+    "question_number": 15,
+    "question_text": "Jaki wyspecjalizowany układ do obsługi przerwań jest wykorzystywany we współczesnych systemach i jak można śledzić analizę zawartości pliku?",
+    "anwser_text": "APIC (Advanced Programmable Interrupt Controller), poprzez plik /proc/interrupts"
+  },
+  {
+    "question_number": 16,
+    "question_text": "Tryb pracy systemu operacyjnego (monitora, użytkownika) jest bezpośrednio powiązany z?",
+    "anwser_text": "Poziomami uprzywilejowania procesora"
+  },
+  {
+    "question_number": 17,
+    "question_text": "Przejście z trybu nieuprzywilejowanego do uprzywilejowanego następuje poprzez zastosowanie?",
+    "anwser_text": "Wywołania systemowego, które w systemie GNU/Linux jest realizowane przez przerwanie nr 128"
+  },
+  {
+    "question_number": 18,
+    "question_text": "W  czasie  swojego  życia  proces  może  być  wielokrotnie  wprowadzany  w  stan wstrzymania (uśpienia). Co to oznacza? Kiedy proces może przejść w taki stan? Jak z niego wyjść? W jakim stanie się wówczas proces znajduje?",
+    "anwser_text": "Uśpiony  (proces  czeka  na  zdarzenie,  np  na  odczyt  danych  z  dysku  lub otrzymanie danych z sieci), proces przechodzi w stan uśpienia kiedy oczekuje na jakiś zasób(np kiedy czyta dane z pendrive’a który nagle zostanie odłączony), proces  uśpiony  zostanie  wykonany  dopiero  po  zajściu  jakiegoś  zdarzenia,  np: zakończeniu operacji wejścia/wyjścia, po wyjściu ze stanu uśpienia proces znajduje się w stanie Gotowy"
+  },
+  {
+    "question_number": 19,
+    "question_text": "Sygnały to?",
+    "anwser_text": "Mechanizm komunikacji między procesami"
+  },
+  {
+    "question_number": 20,
+    "question_text": "Co to jest sygnał?",
+    "anwser_text": "Sygnał to krótka wiadomość wysyłana do procesu lub grupy procesów, zmusza proces do wykonania funkcji zawartej kodzie procesu"
+  },
+  {
+    "question_number": 21,
+    "question_text": "Wymień 5 nazw często używanych sygnałów i opisz ich funkcje (wymień po przecinku):",
+    "anwser_text": "STOP zatrzymanie wykonywania procesu, KILL wymuszone zakończenie procesu, CONT wznowienie zatrzymanego procesu, TERM zakończenie procesu, SEGV nieprawidłowe odwołanie do pamięci"
+  },
+  {
+    "question_number": 22,
+    "question_text": "Sekcja  krytyczna  chroniona  jest  semaforem  o  początkowej  wartości  1.  Pierwszy proces, który chce wejść do sekcji krytycznej wykonuje na semaforze operację ... Jeśli w czasie, kiedy pierwszy proces przebywa w sekcji krytycznej, drugi proces chce do niej wejść wykonuje na semaforze operację ... Pierwszy proces opuszczając sekcję krytyczną wykonuje na semaforze operację ... co powoduje, że ... (odpowiedzi wpisz po przecinku)",
+    "anwser_text": "down i wchodzi do sekcji krytycznej, down i usypia się, up, proces uśpiony oczekujący na wejście do sekcji krytycznej jest budzony"
+  },
+  {
+    "question_number": 23,
+    "question_text": "Demon  htpd  odpowiedzialny  za  usługę  WWW  został  uruchomiony  na  starym serwerze z pojedynczą jednostką centralną ale na tym serwerze działa system operacyjny wspierający  wątki.  Czy  zatem  demon  powinien  być  uruchomiony  w  trybie  jedno  czy wielowątkowym i dlaczego?",
+    "anwser_text": "Wielowątkowym ponieważ: wszystkie wątki wykonują się w ramach tylko jednego programu, wszystkie wątki procesu współdzielą tę samą wirtualną przestrzeń adresową, komunikacja  między  wątkami  w  odróżnieniu  od  procesów  jest  bardzo  łatwa  do wykonania"
+  },
+  {
+    "question_number": 25,
+    "question_text": "Do przydzielania obszarów pamięci w jednostkach 2n (1 strona, 2, 4 strony) służy jaki system i jak działa?",
+    "anwser_text": "Bliźniaków, jeśli nie ma obszaru o żądanej wielkości to dostępna pamięć dzielona jest na pół aż do minimalnego rozmiaru 2n"
+  },
+  {
+    "question_number": 26,
+    "question_text": "W czasie wykonywania się procesów, duży błąd strony pojawia się wówczas, gdy?",
+    "anwser_text": "Strony nie ma w pamięci podręcznej"
+  },
+  {
+    "question_number": 27,
+    "question_text": "W czasie wykonywania się procesów, mały błąd strony pojawia się wówczas, gdy?",
+    "anwser_text": "Strona jest w pamięci podręcznej, ale nie jest oznaczona przez jednostkę zarządzania pamięcią"
+  },
+  {
+    "question_number": 28,
+    "question_text": "Pamięć podręczna buforów służy systemowi operacyjnemu do?",
+    "anwser_text": "Przyśpieszania operacji I/O. System operacyjny na potrzeby usprawnienia dostępu do dysku,   przechowuje   w   pamięci   RAM   i-węzły   katalogów   i   plików   najczęściej używanych, by ograniczyć operacje dyskowe"
+  },
+  {
+    "question_number": 29,
+    "question_text": "Partycja dyskowa to?",
+    "anwser_text": "Logiczny(ciągły) wydzielony obszar dysku twardego, który może zostać sformatowany w odpowiednim systemie plików"
+  },
+  {
+    "question_number": 30,
+    "question_text": "Do tworzenia bądź usuwania partycji dyskowej służą takie programy jak?",
+    "anwser_text": "fdisk, gparted"
+  },
+  {
+    "question_number": 31,
+    "question_text": "Tablica msdos pozwala na stworzenia maksymalnie ... partycji podstawowych:",
+    "anwser_text": "4"
+  },
+  {
+    "question_number": 33,
+    "question_text": "Ile dysków conajmniej wymaga macierz dyskowa RAID10?",
+    "anwser_text": "4"
+  },
+  {
+    "question_number": 34,
+    "question_text": "Ile dysków conajmniej wymaga macierz dyskowa RAID50?",
+    "anwser_text": "6"
+  },
+  {
+    "question_number": 35,
+    "question_text": "Jak dyski są połączone w RAID10?",
+    "anwser_text": "Wewnątrz zbioru dysków podlegających przeplotowi każdy dysk posiada dodatkowe odbicie lustrzane"
+  },
+  {
+    "question_number": 36,
+    "question_text": "Jak dyski są połączone w RAID50?",
+    "anwser_text": "Cała macierz składa się z 2 macierzy zrealizowanych w taki sposób jak RAID-5, tzn. Każdy z dysków (co najmniej 3, tak jak w standardowym RAID-5) zawiera w sobie dane kontrolne. RAID-50 musi składać się z co najmniej 6 dysków (dlatego, że 2*RAID-5)"
+  },
+  {
+    "question_number": 37,
+    "question_text": "W systemie LVM tradycyjnemu dyskowi odpowiada ... na którą składają się ... pochodzące z ... W tym systemie system plików tworzony jest na ... (odpowiedzi wymień po przecinku",
+    "anwser_text": "grupa woluminowa, ekstenta fizyczne, woluminów fizycznych, woluminie logicznym"
+  },
+  {
+    "question_number": 38,
+    "question_text": "Na czym polega przetwarzanie potokowe",
+    "answer_text": "każdy oprócz ostatniego jest połączony z następnym, dane po przejściu przez jedenblok trafiają do następnego, aż osiągną ostatni blok, jednocześnie wykonywanych jest kilka rozkazów, każdy w innym stadium wykonania, statystycznie w każdym cykluzegara procesor wykonuje jeden rozkaz"
+  },
+  {
+    "question_number": 39,
+    "question_text": "Pamięć podręczna procesora poprawia jego wydajność ponieważ?",
+    "answer_text": "powoduje zmniejszanie różnicyprędkości w działaniu procesora i dostępie do pamięci operacyjnej, pamięć operacyjna jest wolna przez co ta różnica jest znaczna, w pamięci podręcznej mamy hierarchię buforów po to by ułatwić wymianę danych między pamięciągłówną a rejestrami procesora"
+  },
+  {
+    "question_number": 40,
+    "question_text": "Architektura procesorów RISC charakteryzuje się:(wymień po przecinku)",
+    "answer_text": "mniejsza ilość rozkazów, mniejszy rozmiar rozkazu, większa liczba rejestrów"
+  },
+  {
+    "question_number": 41,
+    "question_text": "Do czego służy APIC",
+    "answer_text": "APIC służy do zaawansowanego przekierowywania przerwań oraz do wysyłania przerwań pomiędzyprocesorami"
+  },
+  {
+    "question_number": 42,
+    "question_text": "Opisz proces uśpiony",
+    "answer_text": "czeka na zdarzenie, proces przechodzi w ten stan kiedy oczekuje na jakiś zasób, po obudzeniu staje się procesem gotowym"
+  },
+  {
+    "question_number": 43,
+    "question_text": "Opisz proces gotowy",
+    "answer_text": "czeka na przydział procesora"
+  },
+  {
+    "question_number": 44,
+    "question_text": "Kiedy proces bieżący przechodzi w stan gotowy",
+    "answer_text": "W momencie kiedy zostanie wywłaszczony przez planistę"
+  },
+  {
+    "question_number": 45,
+    "question_text": "Kiedy proces bieżący przechodzi w stan uśpiony",
+    "answer_text": "Jeśli oczekuje na zasób lub zdarzenie"
+  },
+  {
+    "question_number": 46,
+    "question_text": "Jak działa funkcja fork() (opisz po przecinku):",
+    "answer_text": "tworzy nowy proces, przydziela procesowi identyfikator, przydziela pozycję w tablicy procesów, procesom powiązanym zwiększa liczniki w tablicy plików i i-węzłów, id potomka przekazuje procesowi macierzystemu i ustawia mu wartość na 0"
+  },
+  {
+    "question_number": 47,
+    "question_text": "Jak działa funkcja exec() (opisz po przecinku):",
+    "answer_text": "Wywołuje inny program i umieszcza w obszarze pamięci procesu kopię pliku wykorzystywanego, uruchamia proces potomny, uruchamia proces kopię dla potrzeb danej funkcji więc nie zatrzyma programu podczas wywoływania"
+  },
+  {
+    "question_number": 48,
+    "question_text": "Czym jest semafor",
+    "answer_text": "chroniona zmienna, która kontroluje dostęp wielu procesów do wspólnego zasobu"
+  },
+  {
+    "question_number": 49,
+    "question_text": "Zdefniuj działania wykonywane przez proces na semaforze",
+    "answer_text": "Można wykonywać na nim operacje DOWN i UP, Tylko jeden proces/wątek może w danym momencie wykonać operację"
+  },
+  {
+    "question_number": 50,
+    "question_text": "Do czego używany jest semafor?",
+    "answer_text": "Używany do kontroli zasobów dzielonych w sekcji krytycznej, Zapobiega zakleszczeniom i hazardom"
+  },
+  {
+    "question_number": 51,
+    "question_text": "Na czym polega problem śpiącego fryzjera? (wymień w poprawnej kolejności po przecinku",
+    "answer_text": "w salonie jest n krzeseł w poczekalni oraz jeden fotel fryzjera, jeśli fryzjer obsługuje klienta to nowo przybyły klient idzie do poczekalni, jeśli w poczekalni nie ma miejsc to nowy klient wychodzi, jeśli fryzjer nie ma klienta to zasypia, problem polega na tym, że nie wiemy ile trwają operacje wykonywane przez fryzjera oraz przezklienta – zajmują nieokreślony czas, Jeśli klient sprawdzi, że fryzjer obsługuje klienta i pójdzie do poczekalni , a w tym samym momenciefryzjer skończy pracę i sprawdzi, że w poczekalni nikogo nie ma to zaśnie, a klient uda się do poczekalnii nie zostanie obsłużony"
   }
 ]

@@ -31,11 +31,12 @@ namespace SysopTrainer.Models
         {
             QuestionText = Methods.RandomizeQuestion();
             CorrectAnswer = Methods.GetCorrectAnswer();
+            AnswerText = string.Empty;
         }
 
         public void CheckAnswer()
         {
-            if (AnswerText == CorrectAnswer)
+            if (AnswerText.Contains(CorrectAnswer))
             {
                 AnswerText += "\n Correct!";
             }

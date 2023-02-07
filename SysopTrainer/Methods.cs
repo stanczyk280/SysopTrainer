@@ -13,7 +13,8 @@ namespace SysopTrainer
     public static class Methods
     {
         private static readonly Random getrandom = new Random();
-        private static int N { get; set; }
+        public static int N { get; set; }
+        private static int oldN = 0;
 
         private static List<Question> incoming = new List<Question>();
         private static StreamReader r = new StreamReader("QuestionsAnswers.json"); // absolute path to be implemented for now use the bin path
@@ -28,6 +29,11 @@ namespace SysopTrainer
         {
             lock (getrandom)
             {
+                var random = getrandom.Next(min, max);
+                if (oldN == random)
+                {
+                    random = getrandom.Next(min, max);
+                }
                 return getrandom.Next(min, max);
             }
         }
@@ -41,6 +47,7 @@ namespace SysopTrainer
             if (incoming != null && incoming.Count > 0)
             {
                 N = GetRandomNumber(1, incoming.Count);
+                oldN = N;
                 question = incoming[N].question_text;
             }
             else

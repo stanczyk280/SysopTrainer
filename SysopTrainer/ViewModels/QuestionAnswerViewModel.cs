@@ -52,6 +52,7 @@ namespace SysopTrainer.ViewModels
                     {
                         model.UpdateQuestionTextBlock();
                         OnPropertyChanged(nameof(QuestionText));
+                        OnPropertyChanged(nameof(AnswerText));
                     },
                     (object o) =>
                     {
