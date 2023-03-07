@@ -1,23 +1,12 @@
 ﻿using SysopTrainer.Models;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Linq;
-using System.Printing;
-using System.Runtime.ConstrainedExecution;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Data;
 using System.Windows.Input;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace SysopTrainer.ViewModels
 {
     public class QuestionAnswerViewModel : INotifyPropertyChanged
     {
-        private QuestionAnswerModel model = new QuestionAnswerModel();
+        private readonly QuestionAnswerModel model = new();
 
         public string QuestionText
         {
@@ -47,17 +36,14 @@ namespace SysopTrainer.ViewModels
         {
             get
             {
-                if (updateQuestionText == null) updateQuestionText = new RelayCommand(
+                updateQuestionText ??= new RelayCommand(
                     (object o) =>
                     {
                         model.UpdateQuestionTextBlock();
                         OnPropertyChanged(nameof(QuestionText));
                         OnPropertyChanged(nameof(AnswerText));
                     },
-                    (object o) =>
-                    {
-                        return model.QuestionText != null;
-                    });
+                    (object o) => model.QuestionText != null);
                 return updateQuestionText;
             }
         }
@@ -66,16 +52,13 @@ namespace SysopTrainer.ViewModels
         {
             get
             {
-                if (checkAnswer == null) checkAnswer = new RelayCommand(
+                checkAnswer ??= new RelayCommand(
                     (object o) =>
                     {
                         model.CheckAnswer();
                         OnPropertyChanged(nameof(AnswerText));
                     },
-                    (object o) =>
-                    {
-                        return model.AnswerText != null;
-                    });
+                    (object o) => model.AnswerText != null);
                 return checkAnswer;
             }
         }
@@ -84,16 +67,13 @@ namespace SysopTrainer.ViewModels
         {
             get
             {
-                if (showAnswer == null) showAnswer = new RelayCommand(
+                showAnswer ??= new RelayCommand(
                     (object o) =>
                     {
                         model.ShowAnswer();
                         OnPropertyChanged(nameof(AnswerText));
                     },
-                    (object o) =>
-                    {
-                        return model.AnswerText != null;
-                    });
+                    (object o) => model.AnswerText != null);
                 return showAnswer;
             }
         }
@@ -102,10 +82,7 @@ namespace SysopTrainer.ViewModels
 
         private void OnPropertyChanged(string propertyName)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
